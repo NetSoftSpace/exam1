@@ -1,1 +1,26 @@
 4-task: JWT token --- >  https://github.com/NetSoftSpace/JWT_token1
+
+5-task:
+
+1: Keshlash bu - foydalanuvchi uchun ishlash jarayonini tezlashtirishga xizmat qiladi. Ma'lumotlarni
+vaqtincha o'zida saqlab turadi va foydalanuvchiga qaytaradi. Foydalanuvchi har safar so'rov
+yuborganda endpointlar qaysidir boshqa serverga murojaat qilib kerakli api manzilni izlaydi va bunga
+vaqt ketadi. Keshlash esa ushbu api manzillarni o'zida vaqtincha saqlab turadi va request-response
+jarayonini tezlashtiradi.
+
+2: Unit testing - loyiha kodi, metodlari, funksiyalari va har bir dastur qismi to'g'ri ishlayotganini
+tekshirish uchun ishlab chiqiladigan testing jarayonidir. Loyiha Productionga chiqishidan oldin
+uning xatolari va kamchiliklari to'g'rilanishi kerak. Agar loyiha foydalanuvchiga qaysidir xato bilan
+ketsa bu loyihaning Aktivligiga salbiy ta'sir qilishi mumkin. Shuning uchun ham loyihalarda unit testing
+jarayonidan foydalanilishi zarur.
+
+3: selected_related va prefetch_related djangoda baza bilan ishlashni tezlashtirish va ma'lumotlar
+bazasi bilan ishlashni optimallashtirish metodlaridir.
+
+selected_related - ikkita jadvaldagi bir-biriga bog'liq fieldlarni topadi va bitta qatorli surovga
+birlashtiradi. Natijada N-1 bog'lanishni o'qish uchun kerak bo'lgan surovlar soni 1 taga kamayadi.
+N+1 so'rovlar ko'payib ketishi bilan bog'liq muammo kamayadi.
+
+prefetch_related - bu metod ma'lumotlarni yuklab olish jarayonini tezlashtiradi. Ma'lumotlar bazasida
+bir-biriga bog'liq jadvallar bo'lsa ularning so'rovlarini bir vaqtda bajaradi. N+1 query so'rovlar
+ortib ketishi muammosini bartaraf etadi.
